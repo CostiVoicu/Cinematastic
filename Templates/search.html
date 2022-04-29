@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/search_style.css' %}">
+{% endblock %}
+
+{% block title %}
+    Cautare
+{% endblock %}
+
+{% block content %}
+    <article class="continut">
+        {% if cautari %}
+            <h2 class="titlu">Rezultatele pentru: <span>{{ nume_film }}</span></h2>
+            {% for cautare in cautari %}
+                <a href="{% url 'film' cautare.nume %}" class="card">
+                    <img class="card_image" src="{{cautare.imagine}}" alt="image">
+                    <p class="nume_film">{{cautare.nume}}</p>
+                </a>
+            {% endfor %}
+        {% else %}
+            <h2 class="titlu">Nu există!</h2>
+        {% endif %}
+
+    </article>
+{% endblock %}

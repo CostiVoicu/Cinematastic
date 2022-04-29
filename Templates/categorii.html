@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/categorii_style.css' %}">
+{% endblock %}
+
+{% block title %}
+    Categorii
+{% endblock %}
+
+{% block content %}
+    <article class="continut">
+        <h2 class="titlu">Categorii de filme</h2>
+        <div class="cards">
+            {% for categorie in categorii %}
+                <a class="card" href="{% url 'categorie' categorie.nume %}">
+                    <p class="nume_categorie">{{ categorie.nume }}</p>
+                </a>
+            {% endfor %}
+        </div>
+    </article>
+{% endblock %}
