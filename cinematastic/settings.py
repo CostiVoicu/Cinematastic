@@ -16,10 +16,10 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 
-STATIC_ROOT = '/staticfiles/'
 BASE_DIR = Path(__file__).resolve().parent.parent
 MEDIA_ROOT = ''
 MEDIA_URL = ''
+STATIC_ROOT = BASE_DIR / "staticfiles"
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -49,7 +49,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
 
-    'whitenoise.middleware.WhiteNoiseMiddlewere',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
