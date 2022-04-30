@@ -34,7 +34,7 @@
             <form autocomplete="off" class="search" method='GET' action="{% url 'search'  %}">
                 <input type="text" placeholder="Cauta..." name="q">
                 <button type="submit">
-                    <img src="{% static 'images/magnifying-glass-solid.svg' %}" alt="">
+                    <img src="{% static 'images/magnifying-glass-solid.svg' %}" alt="submit button image">
                 </button>
             </form>
         </nav>
@@ -42,7 +42,7 @@
         <form autocomplete="off" class="search_mobile" method='GET' action="{% url 'search'  %}">
             <input type="text" placeholder="Cauta..." name="q">
             <button type="submit">
-                <img src="{% static 'images/magnifying-glass-solid.svg' %}" alt="">
+                <img src="{% static 'images/magnifying-glass-solid.svg' %}" alt="submit button image">
             </button>
         </form>
         <div class="nav_bar_mobile">
@@ -68,7 +68,7 @@
                             </span>
                         </div>
                         <div class="image_description">
-                            <img class="card_image" src="{{film.imagine}}" alt="image">
+                            <img class="card_image" src="{{film.imagine}}" alt="movie image">
                             <div class="descriere">
                                 <ul>
                                     <li>Regizor: {{ film.regizor }}</li>
