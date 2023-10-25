@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/categorie_style.css' %}">
+{% endblock %}
+
+{% block title %}
+    {{categorie.nume}}
+{% endblock %}
+{% block content %}
+    <h2 class="titlu">{{categorie.nume}}</h2>
+    <div class="cards">
+        {% for film in filme %}
+            {% if film.id_gen.nume in categorie.nume %}
+                <a class="card" href="{% url 'film' film.nume %}">
+                    <img class="film_image" src="/{{film.imagine}}" alt="image">
+                    <div class="text">
+                        <p class="nume_film">{{film.nume}}</p>
+                        <span class="score">
+                            <p>{{ film.score }}</p>
+                            <img src="{% static 'images/rating_star.png' %}" alt="Rating star" style="width: 25px; height: 25px;">
+                        </span>
+                        <div class="descriere">
+                            <ul>
+                                <li>Regizor: {{ film.regizor }}</li>
+                                <li>Star: {{ film.star }}</li>
+                                <li>Gen: {{ film.id_gen.nume }}</li>
+                                <li>Durată: {{ film.durata }}</li>
+                                <li>Data apariției: {{ film.data }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </a>
+            {% endif %}
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'CSS/film_style.css' %}">
+{% endblock %}
+
+{% block title %}
+    {{film.nume}}
+{% endblock %}
+
+{% block content %}
+    <article class="continut">
+        <div class="image_text">
+            <img class="film_image" src="/{{film.imagine}}" alt="image">
+            <h2 class="titlu">{{film.nume}}</h2>
+            <span class="score">
+                <img src="{% static 'images/rating_star.png' %}" alt="Rating star" style="width: 25px; height: 25px;">
+                <p>{{ film.score }}</p>
+            </span>
+            <p class="descriere">{{film.descriere}}</p>
+            <div class="more_info">
+                <ul>
+                    <li>Regizor: {{ film.regizor }}</li>
+                    <li>Star: {{ film.star }}</li>
+                    <li>Gen: {{ film.id_gen.nume }}</li>
+                    <li>Durată: {{ film.durata }}</li>
+                    <li>Data apariției: {{ film.data }}</li>
+                </ul>
+            </div>
+            <div class="trailer">
+                <img src="{% static 'images/youtube-square-brands.svg' %}" alt="Youtube logo">
+                <a target="_blank" href="{{film.trailer_link}}">Trailer</a>
+            </div>
+        </div>
+        <div class="text">
+            <h2 class="titlu">Storyline</h2>
+            <p>{{film.storyline}}</p>
+        </div>
+    </article>
+{% endblock %}
