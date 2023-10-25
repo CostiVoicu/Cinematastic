@@ -5,7 +5,7 @@
 - [Descrierea proiectului](#descrierea-proiectului)
 - [Screenshots](#screenshots)
 - [Tehnologii](#tehnologii-folosite)
-- [Instructiuni de instalare](#instrucțiuni-de-utilizare)
+- [Instrucțiuni de instalare](#instrucțiuni-de-utilizare)
 
 ## Descrierea proiectului
 Acest proiect este un site web pentru un cinematograf. Utilizatorii au la dispoziție pe prima pagina filmele difuzate în ziua respectivă și harta cu locația cinematografului.\
