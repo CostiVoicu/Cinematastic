@@ -1,0 +1,165 @@
+.titlu {
+  color: #3D3A3F;
+  background-color: #EEF2ED;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  padding-top: 60px;
+  padding-bottom: 100px;
+}
+
+.cards {
+  background-color: #EEF2ED;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  min-height: 100vh;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 50px;
+}
+
+.card {
+  width: 730px;
+  height: 316px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 370px 260px;
+      grid-template-columns: 370px 260px;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  color: #3D3A3F;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 30px;
+  text-decoration: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.card:hover {
+  border-radius: 12px;
+  background-color: #3D3A3F;
+  color: #EEF2ED;
+}
+
+.card:hover .film_image {
+  border: 2px solid #EEF2ED;
+}
+
+.film_image {
+  width: 330px;
+  height: 220px;
+  border-radius: 12px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 4px solid #3D3A3F;
+}
+
+.text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 70% 40%;
+      grid-template-columns: 70% 40%;
+  -ms-grid-rows: 30% 70%;
+      grid-template-rows: 30% 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: stretch;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.nume_film {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1/2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.score {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.score p {
+  font-weight: 500;
+}
+
+.descriere {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1/3;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+.descriere ul {
+  padding-left: 20px;
+}
+
+@media (max-width: 750px) {
+  .card {
+    height: 450px;
+    width: calc(min(90vw, 600px));
+    -ms-grid-columns: calc(min(80vw, 400px));
+        grid-template-columns: calc(min(80vw, 400px));
+    -ms-grid-rows: (221px)[2];
+        grid-template-rows: repeat(2, 221px);
+    padding-top: 35px;
+  }
+  .film_image {
+    width: calc(min(80vw, 400px));
+    height: auto;
+  }
+  .text {
+    -ms-grid-columns: (calc(min(50%, 250px)))[2];
+        grid-template-columns: repeat(2, calc(min(50%, 250px)));
+  }
+  .score {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  .score p {
+    margin-right: 10px;
+  }
+}
+/*# sourceMappingURL=categorie_style.css.map */
