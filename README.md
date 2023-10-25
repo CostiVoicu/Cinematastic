@@ -35,7 +35,7 @@ Se creează și se activează un virtual environment (pentru Windows)
 #instalare venv
 py -m pip install --user virtualenv
 
-#creeare virtual environment
+#creare virtual environment
 py -m venv env
 
 #activare virtual environment
